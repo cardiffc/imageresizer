@@ -2,7 +2,7 @@ import java.io.File;
 
 public class Main
 {
-    private static int newWidth = 1500;
+    private static int newWidth = 300;
     private static String srcFolder = "/home/cardiff/VIDEOS/G9";
     private static String dstFolder = "/home/cardiff/VIDEOS/dst";
     public static void main(String[] args)
