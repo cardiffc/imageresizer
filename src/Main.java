@@ -2,14 +2,15 @@ import java.io.File;
 
 public class Main
 {
-    private static int newWidth = 300;
+    private static int newWidth = 1500;
     private static String srcFolder = "/home/cardiff/VIDEOS/G9";
     private static String dstFolder = "/home/cardiff/VIDEOS/dst";
     public static void main(String[] args)
     {
         File srcDir = new File(srcFolder);
         File[] files = srcDir.listFiles();
-        int vCPUCount = Runtime.getRuntime().availableProcessors();
+
+        int vCPUCount = Runtime.getRuntime().availableProcessors() / 2; // Кол-во CPU доступных JVM. /2 в силу HT
         int filesInThread = files.length / vCPUCount;
         int srcFromIndex = 0;
 
