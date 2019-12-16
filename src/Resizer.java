@@ -26,7 +26,8 @@ public class Resizer extends Thread {
                 if (image == null) {
                     continue;
                 }
-                BufferedImage resizedImage = Scalr.resize(Scalr.resize(image, newWidth * 2),newWidth);
+                BufferedImage resizedImage = Scalr.resize(image, Scalr.Method.SPEED, newWidth * 2);
+                resizedImage = Scalr.resize(resizedImage,Scalr.Method.QUALITY, newWidth);
                 File newFile = new File(dstFolder + "/" + file1.getName());
                 ImageIO.write(resizedImage, "jpg", newFile);
             }
